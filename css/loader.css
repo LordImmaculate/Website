@@ -1,0 +1,59 @@
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    transition: opacity 0,75s, visibility 0.75s;
+    z-index: 1;
+}
+
+.loader-hidden {
+    animation: fadeOutAnimation 1s ease forwards;
+}
+
+.loader::after {
+    content: "";
+    width: 50px;
+    height: 50px;
+    border: 5px solid lightgray;
+    border-top-color: gray;
+    border-radius: 50%;
+    animation: loading 0.75s linear infinite;
+}
+
+@keyframes loading {
+    from {
+        transform: rotate(0turn);
+    }
+    
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+@keyframes fadeOutAnimation {
+    to {
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+@keyframes fadeInAnimation {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.main {
+    transform: translateY(100px);
+}
+
+.main-animate {
+    animation: fadeInAnimation 1s ease forwards; 
+}
