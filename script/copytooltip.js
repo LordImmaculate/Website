@@ -1,4 +1,4 @@
-function myFunction() {
+function showToolTip() {
     navigator.clipboard.writeText("LordImmaculate");
 
     var tooltip = document.getElementById("myTooltip");

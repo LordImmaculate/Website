@@ -1,6 +1,7 @@
 body {
     font-family: sans-serif;
-    background-image: url("/images/background.webp");
+    
+    background-color: black;
     color: white;
 }
 
@@ -13,8 +14,9 @@ body::before {
     height: 100%;
     background-image: inherit;
     background-size: cover;
-    filter: blur(10px)brightness(50%);
     z-index: -1;
+    background-image: url("/images/background.webp");
+    filter: blur(10px)brightness(50%);
 }
 
 a {
