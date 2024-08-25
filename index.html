@@ -9,8 +9,11 @@
     <link rel="stylesheet" href="/css/loader.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
     <script src="https://kit.fontawesome.com/c623afc414.js" crossorigin="anonymous"></script>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
     <script src="script/copytooltip.js"></script>
     <script src="script/loader.js"></script>
+    <script src="script/ip.js"></script>
+    <script src="script/email.js"></script>
 </head>
 
 <body>
@@ -29,13 +32,18 @@
                         class='fab fa-discord'></i>Discord</a></div>
             <a class="actionbutton steam" target="_blank" href="https://steamcommunity.com/id/lordimmaculate"><i
                     class="fa fa-steam"></i>Steam</a>
-            <a class="actionbutton mail" target="_blank" href="mailto:emil.dhauwe@icloud.com"><i
+            <a class="actionbutton mail" href="javascript:void(0);" onclick="showEmailPopup()"><i
                     class="material-icons mail-icon">email</i>Email</a>
             <a class="actionbutton matrix" target="_blank" href="https://matrix.to/#/@lordimmaculate:mozilla.org"><i
                     class="fa fa-comments"></i>Matrix</a>
         </div>
     </div>
+    <div class="emailPopup" id="emailPopup">
+        <a style="color:white" href="javascript:void(0);" onclick="hideEmailPopup()">&times;
+        <div class="cf-turnstile" data-sitekey="0x4AAAAAAAiCxg3Wcyy4GCvg"></div>
+        <a href="mailto:emildh@proton.me">Mail</a>
+    </div>
     <footer>
-        © 2024 LordImmaculate. All rights reserved. Inspiration by <a style="color: cornflowerblue;" href="https://veryepicwebsite.co/">TotallyNotK0</a>. <strong>No user data is collected on this site.</strong>
+        © 2024 LordImmaculate. All rights reserved. Inspiration by <a class="linkFooter" href="https://veryepicwebsite.co/">TotallyNotK0</a>. Your IP address is: <span id="ip-address">Loading...</span>
     </footer>
 </body>
