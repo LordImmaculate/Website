@@ -1,2 +1,2 @@
 # Website
-Personal website. Now hosted on a [domain](https://lordimmaculate.tech)
+Personal website. Now hosted on a [domain](https://lordimmaculate.dev)
