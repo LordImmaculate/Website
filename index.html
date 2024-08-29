@@ -14,6 +14,7 @@
     <script src="script/loader.js"></script>
     <script src="script/ip.js"></script>
     <script src="script/email.js"></script>
+    <script src="script/cf-turnstile.js"></script>
 </head>
 
 <body>
@@ -39,11 +40,17 @@
         </div>
     </div>
     <div class="emailPopup" id="emailPopup">
-        <a style="color:white" href="javascript:void(0);" onclick="hideEmailPopup()">&times;
-        <div class="cf-turnstile" data-sitekey="0x4AAAAAAAiCxg3Wcyy4GCvg"></div>
-        <a href="mailto:emildh@proton.me">Mail</a>
+        <a style="color:white" href="javascript:void(0);" onclick="hideEmailPopup()">&times;</a>
+        <div class="cf-turnstile" id="cf-turnstile" 
+                     data-sitekey="0x4AAAAAAAiCxg3Wcyy4GCvg"
+                     data-callback="onTurnstileSuccess">
+                </div>
+        <!-- Turnstile Normal: 0x4AAAAAAAiCxg3Wcyy4GCvg-->
+        <!-- Turnstile Testing: 1x00000000000000000000AA-->
+        <a class="actionbutton mail hidden" id="emailLink" href="mailto:emil.dhauwe@icloud.com"><i
+            class="material-icons mail-icon">email</i>Email</a>
     </div>
     <footer>
         © 2024 LordImmaculate. All rights reserved. Inspiration by <a class="linkFooter" href="https://veryepicwebsite.co/">TotallyNotK0</a>. Your IP address is: <span id="ip-address">Loading...</span>
-    </footer>
+    </footer>    
 </body>
