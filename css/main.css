@@ -188,7 +188,7 @@ footer {
     width: 30%;
     height: 30%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.9);
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -203,6 +203,12 @@ footer {
 .emailPopup.show {
     opacity: 1;
     transform: translateY(0);
+}
+
+.emailPopup .close-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
 }
 
 @media only screen and (max-width: 600px) {

@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Immaculate's Website</title>
     <link rel="icon" href="/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="/css/main.css">  
+    <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/loader.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <script src="https://kit.fontawesome.com/c623afc414.js" crossorigin="anonymous"></script>
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
     <script src="script/copytooltip.js"></script>
@@ -40,17 +40,22 @@
         </div>
     </div>
     <div class="emailPopup" id="emailPopup">
-        <a style="color: white; margin-right: 10px;" href="javascript:void(0);" onclick="hideEmailPopup()">&times;</a>
-        <div class="cf-turnstile" id="cf-turnstile" 
-                     data-sitekey="0x4AAAAAAAiCxg3Wcyy4GCvg"
-                     data-callback="onTurnstileSuccess">
+        <a class="close-btn" style="color: white; margin-right: 10px;" href="javascript:void(0);" onclick="hideEmailPopup()">&times;</a>
+        <div style="display: block;">
+            <h2 id="emailTitle">Are you a bot?</h2>
+                <div class="cf-turnstile" id="cf-turnstile" data-sitekey="1x00000000000000000000AA"
+                    data-callback="onTurnstileSuccess">
                 </div>
-        <!-- Turnstile Normal: 0x4AAAAAAAiCxg3Wcyy4GCvg-->
-        <!-- Turnstile Testing: 1x00000000000000000000AA-->
-        <a class="actionbutton mail hidden" id="emailLink" href="mailto:emil.dhauwe@icloud.com"><i
-            class="material-icons mail-icon">email</i>Email</a>
+                <!-- Turnstile Normal: 0x4AAAAAAAiCxg3Wcyy4GCvg-->
+                <!-- Turnstile Testing: 1x00000000000000000000AA-->
+                <a class="actionbutton mail hidden" id="emailLink" href="mailto:emil.dhauwe@icloud.com"><i
+                        class="material-icons mail-icon">email</i>Email</a>
+                <p class="hidden" id="emailText">emil.dhauwe@icloud.com</p>
+            </div>
+        </div>
     </div>
     <footer>
-        © 2024 LordImmaculate. All rights reserved. <span class="ip">Your IP address is: <span id="ip-address">Loading...</span></span>
-    </footer>    
+        © 2024 LordImmaculate. All rights reserved. <span class="ip">Your IP address is: <span
+                id="ip-address">Loading...</span></span>
+    </footer>
 </body>
