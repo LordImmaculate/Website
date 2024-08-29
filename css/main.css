@@ -68,6 +68,18 @@ a {
     font-size: large;
     min-width: 100px;
     display: inline-block;
+    cursor: pointer;
+    transition: transform 0.2s ease-in;
+}
+
+@media only screen and (max-width: 600px) {
+    .actionbutton:hover {
+        transform: translateY(0);
+    }
+}
+
+.actionbutton:hover {
+    transform: translateY(-5px);
 }
 
 .github {
@@ -209,6 +221,10 @@ footer {
     position: absolute;
     top: 20px;
     left: 20px;
+}
+
+.emailPopup .close-btn:hover {
+    rotate: 90deg;
 }
 
 @media only screen and (max-width: 600px) {
