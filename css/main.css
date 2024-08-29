@@ -19,7 +19,6 @@ body::before {
 }
 
 a {
-
     text-decoration-line: none;
 }
 
@@ -46,6 +45,14 @@ a {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.8);
 }
 
+@media only screen and (max-width: 600px) {
+    .main {
+        margin: 0;
+        border-radius: 0;
+        width: 100%;
+        padding-top: 10px;
+    }
+}
 
 .actionbutton {
     border-radius: 10px;
@@ -99,7 +106,7 @@ a {
     margin-right: 2px;
 }
 
-a{
+a {
     color: cornflowerblue;
 }
 
@@ -119,6 +126,16 @@ footer {
     justify-content: center;
     white-space: nowrap;
     height: 1em;
+}
+
+@media only screen and (max-width: 600px) {
+    footer {
+        text-wrap: wrap;
+    }
+
+    .ip {
+        display: none;
+    }
 }
 
 .tooltip {
@@ -154,7 +171,7 @@ footer {
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;
-    border-color:  transparent;
+    border-color: transparent;
 }
 
 .tooltip:hover .tooltiptext {
@@ -180,12 +197,20 @@ footer {
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.8);
     transform: translateY(2000px);
-    transition: opacity 1s, transform 1s;
+    transition: opacity 0.5s, transform 0.5s;
 }
+
 .emailPopup.show {
     opacity: 1;
     transform: translateY(0);
-} 
+}
+
+@media only screen and (max-width: 600px) {
+    .emailPopup {
+        width: 80%;
+        left: 10%;
+    }
+}
 
 .hidden {
     display: none;
