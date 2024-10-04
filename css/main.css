@@ -15,7 +15,7 @@ body::before {
     background-size: cover;
     z-index: -1;
     background-image: url("/images/background.jpg");
-    filter: blur(10px)brightness(50%);
+    filter: blur(10px) brightness(50%);
 }
 
 a {
@@ -35,14 +35,15 @@ a {
     background-color: rgba(0, 0, 0, 0.7);
     border-radius: 10px;
     text-align: center;
-    margin-top: 10%;
     margin-left: 28%;
     margin-right: 28%;
     padding: 10px;
     padding-bottom: 30px;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow:
+        0 4px 8px rgba(0, 0, 0, 0.8),
+        0 0 20px rgba(0, 0, 0, 0.8);
 }
 
 @media only screen and (max-width: 600px) {
@@ -107,15 +108,18 @@ a {
 
 .matrix {
     background-color: white;
-    color: black
+    color: black;
 }
 
-.mail-icon {
-    vertical-align: -6px;
+.raven {
+    background-color: rgb(15, 22, 131);
+    color: white;
 }
 
-.fa {
-    margin-right: 2px;
+.icon {
+    margin-right: 5px;
+    display: inline-block;
+    margin-bottom: -3px;
 }
 
 a {
@@ -207,9 +211,13 @@ footer {
     font-size: 20px;
     opacity: 0;
     border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow:
+        0 4px 8px rgba(0, 0, 0, 0.8),
+        0 0 20px rgba(0, 0, 0, 0.8);
     transform: translateY(2000px);
-    transition: opacity 0.5s, transform 0.5s;
+    transition:
+        opacity 0.5s,
+        transform 0.5s;
 }
 
 .emailPopup.show {
